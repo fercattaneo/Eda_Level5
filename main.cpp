@@ -6,9 +6,16 @@ int main(char argc, char* argv[]) {
 
 	ifstream fileIn1(argv[1]);
 	string linea, genoma1, genoma2;
-	do(getline(fileIn1, linea)); {
-		while(!linea.find("ORIGIN"))
+	size_t found= string::npos;
+	long int geneNumber = 0;
+	while((getline(fileIn1, linea)) && (found==string::npos)) 
+	{
+		found = linea.find("ORIGIN");
+
     }
+	if (found != string::npos) {
+		while()
+	}
 	//busco el numero
 	//leo 6 strings y los almaceno en genoma1
 	//l
