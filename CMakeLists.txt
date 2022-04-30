@@ -16,13 +16,11 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     add_link_options(-fsanitize=undefined)
 endif()
 
-add_executable(main main.cpp)
-
-
+add_executable(main main.cpp "logic.h")
 
 enable_testing()
 
+#TODO SEPARA LAS FUNCIONES EN ARCHIVOS Y PONERLAS EN ESTE PARENTESIS
+add_executable(main_test main_test.cpp )
 
-#add_executable(player_test player_test.cpp MQTTClient.cpp Player.cpp Robot.cpp GameModel.cpp GameView.cpp)
-
-#add_test(NAME test1 COMMAND player_test)
+add_test(NAME test1 COMMAND main_test)

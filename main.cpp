@@ -1,34 +1,26 @@
 #include <fstream>
 #include <string>
+#include <sstream>
 
 using namespace std;
+
 int main(char argc, char* argv[]) {
 
 	ifstream fileIn1(argv[1]);
-	string linea, genoma1, genoma2;
-	size_t found= string::npos;
-	long int geneNumber = 0;
-	while((getline(fileIn1, linea)) && (found==string::npos)) 
-	{
-		found = linea.find("ORIGIN");
-
-    }
-	if (found != string::npos) {
-		while()
-	}
-	//busco el numero
-	//leo 6 strings y los almaceno en genoma1
-	//l
-	genoma1 += genoma1 tiraADN
+	
 	return 0;
 }
 
 /*
+		FUNCIONES MAIN:
+- Funcion que guarda el string de todo el genoma
+- Funcion de la matriz que devuelve coiencidencia.Tambien imprime el ADN
+/*
 		TESTS:
 
--Verificacion del archivo
--Verificacion del guardado de strings
--Verificacion del valor de coincidencia
--Verificacion del resultado(dos genomas alineados)
-
+-Verificacion del archivo (X)
+-Verificacion del guardado de strings. Recibe un archivo con 2 cadenas (de 10) y verifica que imprima bien
+-Verificacion del valor de coincidencia. /La funcion de la matriz devuelve el valor de coincidencia
+-Verificacion del resultado(dos genomas alineados). Ver que lo que se imprime llamando a la matriz es correcto
+-HAY QUE PONER EL .JSON EN EL CMAKE
 */
