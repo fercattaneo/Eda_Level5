@@ -6,7 +6,7 @@
 using namespace std;
 
 
-string getGenoma(char* file, string& genoma) {
+void getGenoma(char* file, string& genoma) {
 	ifstream fileIn1(file);
 	string linea;
 	size_t found = string::npos;
@@ -22,36 +22,30 @@ string getGenoma(char* file, string& genoma) {
 	{
 		found = string::npos;
 
-		//busco el numero 1 para empezar a llenar el genoma
-		while ((found == string::npos) && (getline(fileIn1, linea)))
-		{
-			found = linea.find("1");
-		}
-
-		found = string::npos;
-
-		/*
-		*leo 6 strings y los almaceno en genoma. Paro cuando encuentro la doble barra o 
-		* se termina el archivo
-		*/
 		do
 		{
 			found = linea.find("//");
-
-			istringstream iss(linea);
-			iss >> geneNumber;
-			cout << "Numero de caracter inicial: " << geneNumber << endl;
-
-			int i = 0;
-			string palabraAux;
-
-			//leo un maximo de 6 strings. Si hay menos strings paro de leer
-			while ((i < 6) && (iss >> palabraAux))
+			char addedChar;
+			for (int i = 0; i < linea.size(); i++) 
 			{
-				cout << "String Agregado al genoma: " << palabraAux;
-				genoma += palabraAux;
+				addedChar = linea[i];
+				
+				switch (addedChar)
+				{
+				case 'a':
+				case 'c':
+				case 'g':
+				case 't':
+					genoma += addedChar;
+					cout << "Caracter Agregado al genoma: " << addedChar;
+					break;
+				default:
+					cout << "Caracter Invalido no agregado: " << addedChar;
+					break;
+				}
 			}
+			//leo un maximo de 6 strings. Si hay menos strings paro de leer
 
-		} while (getline(fileIn1, linea) && (found == string::npos));
+		} while ((getline(fileIn1, linea)) && (found == string::npos));
 	}
 }

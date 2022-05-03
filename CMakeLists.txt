@@ -16,11 +16,11 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     add_link_options(-fsanitize=undefined)
 endif()
 
-add_executable(main main.cpp "logic.h")
+add_executable(main main.cpp testfunc.cpp logic.cpp text.cpp)
 
 enable_testing()
 
 #TODO SEPARA LAS FUNCIONES EN ARCHIVOS Y PONERLAS EN ESTE PARENTESIS
-add_executable(main_test main_test.cpp )
+add_executable(main_test main_test.cpp testfunc.cpp logic.cpp text.cpp)
 
 add_test(NAME test1 COMMAND main_test)
