@@ -1,9 +1,9 @@
-
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
 #include "logic.h"
-#include <stdbool>
+#include "text.h"
 using namespace std;
 /*
 -HAY QUE PONER EL .JSON EN EL CMAKE
@@ -28,7 +28,9 @@ int main (int argc, char * argv[]) {
     * Modificando el archivo de texto pasado se prueban distintos casos limites.  
     *
     */ 
-        string value = getGenoma(argv[1]);
+    cout << "Testeando el guardado de Strings..." << endl;
+        string value;
+        getGenoma("textoPrueba.txt", value);
         if(value == "acgacgacgagcagcagcaa"){
             pass();
         }
