@@ -23,34 +23,45 @@ int pass()
 }
 
 
-int main (int argc, char * argv[]) {
+int main2(int argc, char * argv[]) {
+    cout << "argc: " << argc << endl;
+    for(int i = 0; i < argc; i++)
+    {
+        cout << "argv[" << i << "]: " << argv[i] << endl;
+    }
+
+
+    return 0;
+}
+
+int main(int argc, char * argv[]) {
     /*Test 1. Guardado de string
     * Modificando el archivo de texto pasado se prueban distintos casos limites.  
     *
     */ 
     cout << "Testeando el guardado de Strings..." << endl;
-        string value;
-        getGenoma("textoPrueba.txt", value);
-        if(value == "acgacgacgagcagcagcaa"){
-            pass();
-        }
-        else{
-            fail();
-        }
-    }
+    string value;
+    
+    getGenoma(argv[1], value);
+    // if(value == "acgacgacgagcagcagcaa"){
+    //     pass();
+    // }
+    // else{
+    //     fail();
+    // }
 
-    //Test 2. Valor de coincidencia
-    string genoma1 = "gattaca";
-    string genoma2 = "cgatacg";
-    int value = useAlgoritm (string &genoma1, string &genoma2){
-        if (value == 2){
-            pass();
-        }
-        else{
-            fail();
-        }
-    }
+    // //Test 2. Valor de coincidencia
+    // string genoma1 = "gattaca";
+    // string genoma2 = "cgatacg";
+    // int coincidencia = useAlgoritm (genoma1, genoma2);
+    //     if (coincidencia == 2){
+    //         pass();
+    //     }
+    //     else{
+    //         fail();
+    //     }
 
     //Test 3. verificar el valor de cada casilla del camino optimo
 
+    return 0;
 }

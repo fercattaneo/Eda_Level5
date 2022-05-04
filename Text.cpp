@@ -4,17 +4,27 @@
 #include <iostream>
 #include "text.h"
 
+#include <filesystem>
+
 using namespace std;
 
-
 void getGenoma(char* file, string& genoma) {
-	ifstream fileIn1(file);
+	string fp = file;
+	ifstream fileIn1(fp);
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
 
+	if (fileIn1.is_open()) {
+		cout << "Open!!!\n";
+	}
+	else {
+		cout << "noup\n";
+	}
+
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
-	while ((found == string::npos) && (getline(fileIn1, linea)))
+	//(found == string::npos) &&
+	while ( (getline(fileIn1, linea)))
 	{
 		found = linea.find("ORIGIN");
 	}
