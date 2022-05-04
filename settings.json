@@ -1,8 +1,0 @@
-{
-    "cmake.debugConfig": {
-        "args": [
-            "\"../textoPrueba.txt\"",
-            "\"../archivo 2.txt\""
-        ]
-    },
-}
