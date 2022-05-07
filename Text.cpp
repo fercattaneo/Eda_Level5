@@ -9,8 +9,10 @@
 using namespace std;
 
 void getGenoma(char* file, string& genoma) {
-	string fp = file;
-	ifstream fileIn1(fp);
+	//string fp = file;
+	cout << file << endl;
+	ifstream fileIn1(file);
+	cout << "Hola" <<endl;
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
