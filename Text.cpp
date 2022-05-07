@@ -8,19 +8,28 @@ using namespace std;
 
 
 void getGenoma(char* file, string& genoma) {
+	cout << "ENTRA A GETGENOMA" << endl;
+	cout << "archivo:" << file << endl;
 	ifstream fileIn1(file);
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
 
+
+	cout << fileIn1.is_open();
+
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
 	while ((found == string::npos) && (getline(fileIn1, linea)))
 	{
+		cout << "Entra al while" << endl;
+		cout << linea << endl;
 		found = linea.find("ORIGIN");
+
 	}
 	//si el archivo contiente ORIGIN...
 	if (found != string::npos)
 	{
+		cout << "ENCONTRE ORIGIN" << endl;
 		found = string::npos;
 
 		do
@@ -38,10 +47,10 @@ void getGenoma(char* file, string& genoma) {
 				case 'g':
 				case 't':
 					genoma += addedChar;
-					cout << "Caracter Agregado al genoma: " << addedChar;
+					cout << "Caracter Agregado al genoma: " << addedChar << endl;
 					break;
 				default:
-					cout << "Caracter Invalido no agregado: " << addedChar;
+					cout << "Caracter Invalido no agregado: " << addedChar << endl;
 					break;
 				}
 			}

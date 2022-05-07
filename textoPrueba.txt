@@ -5,12 +5,17 @@ asdasd
 sad
 asd
 asd
-sad
-sadsad
+                     /gene="ORF10"
+                     /note="Coronavirus 3' UTR pseudoknot stem-loop 1"
+     stem_loop       29637..29665
+                     /gene="ORF10"
+                     /note="Coronavirus 3' UTR pseudoknot stem-loop 2"
+     stem_loop       29736..29776
+                     /note="Coronavirus 3' stem-loop II-like motif (s2m)"
+ORIGIN      
+          atta
+        1 aaggtttata ccttcccagg taacaaacca accaactttc gatctcttgt agatctgttc
+       61 tctaaacgaa ctttaaaatc tgtgtggctg tcactcggct gcatgcttag tgcactmbokvbmvokbmvbcacg
+ nbokbobonmboknmbkn
 
-ORIGIN
-111221121212
-211212
-acgacgacgagcagcagcaa
-
-//
+      //
