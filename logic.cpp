@@ -1,3 +1,12 @@
+/*
+* Creado por: Agustin Casas y Fernanda Cattaneo
+* 22.08 EDA Level 5
+* 10/05/2022
+* En este archivo se encuentran las funciones que tienen que ver con el
+* funcionamiento del algoritmo de Needleman-Wunsch y la impresion de los
+* genomas enlazados.
+*/
+
 #include <string>
 #include <iostream>
 #include "logic.h"
@@ -5,16 +14,16 @@
 #include <new>
 using namespace std;
 
+/*Funcion que se encarga de realizar la matriz del algoritmo needlman-
+y de guardar como quedan enlazados los genomas*/
 int useAlgoritm(string& genoma1, string& genoma2, string& gen1result, string& gen2result, string& middlestr) {
-	cout << "ENTRA A USE ALGORITHM" << endl;
 	int row = genoma1.size() + 1;
 	int col = genoma2.size() + 1;
-	//la matriz sera de m+1 x n+1 ; con m = size del genoma1, n= size del genoma2
 	casilla_t* matrix = new casilla_t[row * col];
 
 	matrix[0] = { 0,{0,0,0,0} };
 
-
+	//Se cargan los elementos de la fila 1 columna 0 y fila 0 columna 1
 	for (int i = 1; i < col; i++)
 	{
 		matrix[i] = { -i,{0,0,1,0} };
@@ -29,13 +38,13 @@ int useAlgoritm(string& genoma1, string& genoma2, string& gen1result, string& ge
 	int left = 0;
 	int diagonal = 0;
 
-//Este bucle arranca en 1 dado que las primeras posiciones ya están colocadas 
-//y se analiza desde la celda (1,1)
+/*Este bucle arranca en 1 dado que las primeras posiciones ya están colocadas 
+y se analiza desde la celda (1,1)*/
 	for (int i=1; i < row; i++) 
 	{
 		for (int j=1; j < col; j++)
 		{
-			if(genoma1[i-1]==genoma2[j-1]){  /*Resto uno en ambos casos dado que arranco 
+			if(genoma1[i-1]==genoma2[j-1]){  /*Se resta uno en ambos casos dado que arranca
 			contando desde 1 pero esa celda coincide con el 0 del string */
 				diagonal = matrix[(i-1)*col + (j-1)].value + MATCH;
 			}
@@ -45,6 +54,7 @@ int useAlgoritm(string& genoma1, string& genoma2, string& gen1result, string& ge
 			up = matrix[(i-1)*col + j].value + INDEL;
 			left = matrix[i*col + (j-1)].value + INDEL;
 
+			//Se analiza desde qué direccion el resultado es más alto
 			if (diagonal >= up && diagonal >= left){
 
 				matrix[i*col + j].value = diagonal;
@@ -79,16 +89,18 @@ int useAlgoritm(string& genoma1, string& genoma2, string& gen1result, string& ge
 			}
 		}
 	}
-
-	for (int i = 0; i < row; i++) {
-		for (int j = 0; j < col; j++) {
-			cout << matrix[i * col + j].value<< '\t';
+	
+	#ifdef DEBUG
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < col; j++) {
+				cout << matrix[i * col + j].value<< '\t';
+			}
+			cout << endl;
 		}
-		cout << endl;
-	}
+	#endif
 
 
-	//Funcion que imprime
+	//Se guada como se enlanzan los genomas y se muestra en pantalla
 	int i = row-1;
 	int j = col-1;
 	while( j>=0 && i>=0) {
@@ -117,16 +129,21 @@ int useAlgoritm(string& genoma1, string& genoma2, string& gen1result, string& ge
 			if (i == 0 && j == 0)
 				break;
 		}
+	
 	invertString(gen1result);
 	invertString(gen2result);
 	invertString(middlestr);
 	
+	//Se muestra en pantalla
+	//printStrings(gen1result, gen2result, middlestr);
 	printStrings(gen1result, gen2result, middlestr);
 
 	return matrix[row * col -1].value;
 	delete[] matrix;
 }
 
+/*Funcion que invierte los string. Se utiliza dado que la matriz se recorre desde
+el ultimo elemento al primer elemento*/
 void invertString (string &originalString){
 	string invertedString;
 	for (int i = originalString.size()-1; i >=0; i--) {
@@ -134,8 +151,10 @@ void invertString (string &originalString){
 	}
 	originalString = invertedString;
 }
+
+/*Funcion que se utiliza para imprimir los string respetando que no sean mas
+de 60 acaracteres por linea*/
 void printStrings(string& gen1result, string& gen2result, string& middlestr) {
-	//Tienen largos iguales
 	for (int x = 0; x < gen1result.size(); x += 59) {
 		cout << gen1result.substr(x, 60) << endl;
 		cout << middlestr.substr(x, 60) << endl;

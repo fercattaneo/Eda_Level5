@@ -1,3 +1,10 @@
+/*
+* Creado por: Agustin Casas y Fernanda Cattaneo
+* 22.08 EDA Level 5
+* 10/05/2022
+* En este archivo se encuentran las pruebas realizadas para analizar
+* la funcionalidad del código y de las diferentes funciones que se crearon.
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -18,18 +25,6 @@ int pass()
     cout << "PASS" << endl;
     return 0;
 }
-
-
-/*int main2(int argc, char * argv[]) {
-    cout << "argc: " << argc << endl;
-    for(int i = 0; i < argc; i++)
-    {
-        cout << "argv[" << i << "]: " << argv[i] << endl;
-    }
-
-
-    return 0;
-}*/
 
 int main() {
     /*Test 1. Guardado de string
