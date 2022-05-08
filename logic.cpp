@@ -1,7 +1,8 @@
 #include <string>
-using namespace std;
 #include "logic.h"
 #include <vector>
+#include <iostream>
+using namespace std;
 
 int useAlgoritm (string &genoma1, string &genoma2){
 	int row = genoma1.size();
@@ -9,6 +10,7 @@ int useAlgoritm (string &genoma1, string &genoma2){
 	//la matriz sera de m+1 x n+1 ; con m = size del genoma1, n= size del genoma2
 	vector < vector <casilla_t> > matrix;
 	matrix[0].push_back({ 0,{0,0,0,0} });
+	cout << "HASTA ACA BIEN" << endl;
 
 	for (int i = 1; i < col + 1; i++)
 	{
@@ -19,6 +21,7 @@ int useAlgoritm (string &genoma1, string &genoma2){
 		matrix[i].push_back({ -i,{0,0,0,0} });
 	}
 
+	
 	int up = 0;
 	int left = 0;
 	int diagonal = 0;

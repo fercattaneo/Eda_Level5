@@ -25,24 +25,27 @@ void getGenoma(char* file, string& genoma) {
 	}
 
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
-	//(found == string::npos) &&
-	while ( (getline(fileIn1, linea)))
+	while ((found == string::npos) && (getline(fileIn1, linea)))
 	{
+		cout << "Entra al while" << endl;
+		cout << linea << endl;
 		found = linea.find("ORIGIN");
+
 	}
 	//si el archivo contiente ORIGIN...
 	if (found != string::npos)
 	{
+		cout << "ENCONTRE ORIGIN" << endl;
 		found = string::npos;
 
 		do
 		{
 			found = linea.find("//");
 			char addedChar;
-			for (int i = 0; i < linea.size(); i++) 
+			for (int i = 0; i < linea.size(); i++)
 			{
 				addedChar = linea[i];
-				
+
 				switch (addedChar)
 				{
 				case 'a':
@@ -50,10 +53,10 @@ void getGenoma(char* file, string& genoma) {
 				case 'g':
 				case 't':
 					genoma += addedChar;
-					cout << "Caracter Agregado al genoma: " << addedChar;
+					cout << "Caracter Agregado al genoma: " << addedChar << endl;
 					break;
 				default:
-					cout << "Caracter Invalido no agregado: " << addedChar;
+					cout << "Caracter Invalido no agregado: " << addedChar << endl;
 					break;
 				}
 			}

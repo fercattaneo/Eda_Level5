@@ -31,24 +31,31 @@ int pass()
     return 0;
 }*/
 
-int main(int argc, char * argv[]) {
+int main() {
     /*Test 1. Guardado de string
     * Modificando el archivo de texto pasado se prueban distintos casos limites.  
     *
     */ 
     cout << "Testeando el guardado de Strings..." << endl;
     string value;
-    cout << argv[1] << endl;
+   
     
-    getGenoma(argv[1], value);
-    if(value == "acgacgacgagcagcagcaa"){
+    getGenoma("C:/Users/Agustin/source/repos/Eda_Level5/textoPrueba.txt", value);
+    cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
+    string realvalue = "acgacgacgagcagcagcaa";
+    int eq = 1;
+    for (int i = 0; (i < realvalue.size()) && eq == 1; i++) {
+        if (realvalue[i] != value[i])
+            eq = 0;
+    }
+    if(eq){
          pass();
     }
     else{
          fail();
     }
 
-    // //Test 2. Valor de coincidencia
+    // Test 2. Valor de coincidencia
     string genoma1 = "gattaca";
     string genoma2 = "cgatacg";
     int coincidencia = useAlgoritm (genoma1, genoma2);
@@ -60,6 +67,6 @@ int main(int argc, char * argv[]) {
     }
 
     //Test 3. verificar el valor de cada casilla del camino optimo
-
+    
     return 0;
 }
