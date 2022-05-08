@@ -58,10 +58,13 @@ int main() {
 
      //Test 2. Valor de coincidencia
 
-    string genoma1 = "gattaca";
-    string genoma2 = "cgatacg";
-    int coincidencia = useAlgoritm (genoma1, genoma2);
-    if (coincidencia == 2){
+    string genoma1 = "ATTGCGTATTG";
+    string genoma2 = "CATTGATTAG";
+    string gen1result;
+    string gen2result;
+    string middleresult;
+    int coincidencia = useAlgoritm (genoma1, genoma2, gen1result, gen2result, middleresult);
+    if (coincidencia == 3){
         pass();     
     }
     else{
