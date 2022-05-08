@@ -1,3 +1,11 @@
+/*
+* Creado por: Agustin Casas y Fernanda Cattaneo
+* 22.08 EDA Level 5
+* 10/05/2022
+* En este archivo se encuentran las funciones que tienen que ver con el
+* funcionamiento del algoritmo de Needleman-Wunsch y la impresion de los
+* genomas enlazados.
+*/
 #include <string>
 #include <vector>
 #include "logic.h"
@@ -24,7 +32,7 @@ int useAlgoritm(string& genoma1, string& genoma2) {
 	}
 	for (auto& i : matrix) {
 		for (auto j : i) {
-			i[1]
+			i[1];
 		}
 	}
 	//cout << matrix;

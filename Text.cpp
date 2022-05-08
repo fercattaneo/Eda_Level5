@@ -1,3 +1,10 @@
+/*
+* Creado por: Agustin Casas y Fernanda Cattaneo
+* 22.08 EDA Level 5
+* 10/05/2022
+* En este archivo se encuentra la función que se encarga de leer e interpretar el 
+* archivo con los genomas a analizar.
+*/
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -8,8 +15,6 @@ using namespace std;
 
 
 void getGenoma(char* file, string& genoma) {
-	cout << "ENTRA A GETGENOMA" << endl;
-	cout << "archivo:" << file << endl;
 	ifstream fileIn1(file);
 	string linea;
 	size_t found = string::npos;

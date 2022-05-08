@@ -1,3 +1,10 @@
+/*
+* Creado por: Agustin Casas y Fernanda Cattaneo
+* 22.08 EDA Level 5
+* 10/05/2022
+* En este archivo se encuentran las pruebas realizadas para analizar
+* la funcionalidad del código y de las diferentes funciones que se crearon.
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
