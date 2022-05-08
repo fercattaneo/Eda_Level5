@@ -38,9 +38,9 @@ int main() {
     */ 
     cout << "Testeando el guardado de Strings..." << endl;
     string value;
-   
-    
+
     getGenoma("C:/Users/Agustin/source/repos/Eda_Level5/textoPrueba.txt", value);
+
     cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
     string realvalue = "acgacgacgagcagcagcaa";
     int eq = 1;
@@ -55,7 +55,9 @@ int main() {
          fail();
     }
 
-    // Test 2. Valor de coincidencia
+
+     //Test 2. Valor de coincidencia
+
     string genoma1 = "gattaca";
     string genoma2 = "cgatacg";
     int coincidencia = useAlgoritm (genoma1, genoma2);
@@ -65,7 +67,7 @@ int main() {
     else{
         fail();
     }
-
+    
     //Test 3. verificar el valor de cada casilla del camino optimo
     
     return 0;

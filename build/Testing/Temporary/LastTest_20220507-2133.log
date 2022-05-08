@@ -1,0 +1,19 @@
+Start testing: May 07 18:49 Hora estándar de Argentina
+----------------------------------------------------------
+1/1 Testing: test1
+1/1 Test: test1
+Command: "C:/Users/catta/Documents/EDA/Eda_Level5/build/Debug/main_test.exe"
+Directory: C:/Users/catta/Documents/EDA/Eda_Level5/build
+"test1" start time: May 07 18:49 Hora estándar de Argentina
+Output:
+----------------------------------------------------------
+Testeando el guardado de Strings...
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Failed.
+"test1" end time: May 07 18:49 Hora estándar de Argentina
+"test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 07 18:49 Hora estándar de Argentina

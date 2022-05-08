@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20220507-2133-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.22.22022201-MSVC_2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="LAPTOP-2I2L2DMR"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19043)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="15"
+	ModelID="0"
+	ProcessorCacheSize="64"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="11645"
+	TotalPhysicalMemory="7549"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="1996"
+	>
+	<Testing>
+		<StartDateTime>May 07 18:49 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</StartDateTime>
+		<StartTestTime>1651960160</StartTestTime>
+		<TestList>
+			<Test>./test1</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>test1</Name>
+			<Path>.</Path>
+			<FullName>./test1</FullName>
+			<FullCommandLine>C:\Users\catta\Documents\EDA\Eda_Level5\build\Debug\main_test.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>SEGFAULT</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>3221225477</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.101201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\catta\Documents\EDA\Eda_Level5\build\Debug\main_test.exe</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Testeando el guardado de Strings...
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 07 18:49 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</EndDateTime>
+		<EndTestTime>1651960160</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
