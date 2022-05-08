@@ -135,7 +135,6 @@ y se analiza desde la celda (1,1)*/
 	invertString(middlestr);
 	
 	//Se muestra en pantalla
-	//printStrings(gen1result, gen2result, middlestr);
 	printStrings(gen1result, gen2result, middlestr);
 
 	return matrix[row * col -1].value;

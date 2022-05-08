@@ -9,7 +9,7 @@ The output was:
 Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
 Copyright (C) Microsoft Corporation. Todos los derechos reservados.
 
-Compilación iniciada a las 7/5/2022 18:31:58.
+Compilación iniciada a las 8/5/2022 19:33:51.
 Proyecto "C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\3.22.22022201-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
 PrepareForBuild:
   Creando directorio "Debug\".
@@ -43,7 +43,7 @@ Compilación correcta.
     0 Advertencia(s)
     0 Errores
 
-Tiempo transcurrido 00:00:01.82
+Tiempo transcurrido 00:00:02.50
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -62,7 +62,7 @@ The output was:
 Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
 Copyright (C) Microsoft Corporation. Todos los derechos reservados.
 
-Compilación iniciada a las 7/5/2022 18:32:00.
+Compilación iniciada a las 8/5/2022 19:33:54.
 Proyecto "C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\3.22.22022201-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
 PrepareForBuild:
   Creando directorio "Debug\".
@@ -96,7 +96,7 @@ Compilación correcta.
     0 Advertencia(s)
     0 Errores
 
-Tiempo transcurrido 00:00:01.44
+Tiempo transcurrido 00:00:02.30
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -108,28 +108,28 @@ The CXX compiler identification is MSVC, found in "C:/Users/catta/Documents/EDA/
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/catta/Documents/EDA/Eda_Level5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_d8347.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_78c06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
 Copyright (C) Microsoft Corporation. Todos los derechos reservados.
 
   Compilador de optimización de C/C++ de Microsoft (R) versión 19.31.31105 para x64
-  CMakeCCompilerABI.c
   (C) Microsoft Corporation. Todos los derechos reservados.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d8347.dir\Debug\\" /Fd"cmTC_d8347.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
-  cmTC_d8347.vcxproj -> C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\CMakeTmp\Debug\cmTC_d8347.exe
+  CMakeCCompilerABI.c
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_78c06.dir\Debug\\" /Fd"cmTC_78c06.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
+  cmTC_78c06.vcxproj -> C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\CMakeTmp\Debug\cmTC_78c06.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/catta/Documents/EDA/Eda_Level5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1ef11.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8c140.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft (R) Build Engine versión 17.1.0+ae57d105c para .NET Framework
 Copyright (C) Microsoft Corporation. Todos los derechos reservados.
 
   Compilador de optimización de C/C++ de Microsoft (R) versión 19.31.31105 para x64
   CMakeCXXCompilerABI.cpp
   (C) Microsoft Corporation. Todos los derechos reservados.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1ef11.dir\Debug\\" /Fd"cmTC_1ef11.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_1ef11.vcxproj -> C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\CMakeTmp\Debug\cmTC_1ef11.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_8c140.dir\Debug\\" /Fd"cmTC_8c140.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_8c140.vcxproj -> C:\Users\catta\Documents\EDA\Eda_Level5\build\CMakeFiles\CMakeTmp\Debug\cmTC_8c140.exe
 
 
 

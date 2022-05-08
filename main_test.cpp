@@ -34,7 +34,7 @@ int main() {
     cout << "Testeando el guardado de Strings..." << endl;
     string value;
 
-    getGenoma("C:/Users/Agustin/source/repos/Eda_Level5/textoPrueba.txt", value);
+    getGenoma("C:/Users/catta/Documents/EDA/Eda_Level5/textoPrueba.txt", value);
 
     cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
     string realvalue = "acgacgacgagcagcagcaa";

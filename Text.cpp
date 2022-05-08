@@ -15,8 +15,8 @@
 
 using namespace std;
 
+//Funcion que se encarga de leer el archivo que se le pasa y guardar los genomas en un string
 void getGenoma(char* file, string& genoma) {
-	//string fp = file;
 	cout << file << endl;
 	ifstream fileIn1(file);
 	cout << "Hola" <<endl;
@@ -34,15 +34,12 @@ void getGenoma(char* file, string& genoma) {
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
 	while ((found == string::npos) && (getline(fileIn1, linea)))
 	{
-		cout << "Entra al while" << endl;
-		cout << linea << endl;
 		found = linea.find("ORIGIN");
 
 	}
 	//si el archivo contiente ORIGIN...
 	if (found != string::npos)
 	{
-		cout << "ENCONTRE ORIGIN" << endl;
 		found = string::npos;
 
 		do
@@ -60,14 +57,12 @@ void getGenoma(char* file, string& genoma) {
 				case 'g':
 				case 't':
 					genoma += addedChar;
-					cout << "Caracter Agregado al genoma: " << addedChar << endl;
 					break;
 				default:
-					cout << "Caracter Invalido no agregado: " << addedChar << endl;
 					break;
 				}
 			}
-			//leo un maximo de 6 strings. Si hay menos strings paro de leer
+			//se lee un maximo de 6 strings. Si hay menos strings se deja de leer
 
 		} while ((getline(fileIn1, linea)) && (found == string::npos));
 	}

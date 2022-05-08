@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="(empty)"
-	BuildStamp="20220507-2133-Experimental"
+	BuildStamp="20220508-2234-Experimental"
 	Name="(empty)"
 	Generator="ctest-3.22.22022201-MSVC_2"
 	CompilerName=""
@@ -24,25 +24,19 @@
 	ProcessorClockFrequency="1996"
 	>
 	<Testing>
-		<StartDateTime>May 07 18:49 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</StartDateTime>
-		<StartTestTime>1651960160</StartTestTime>
+		<StartDateTime>May 08 19:38 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</StartDateTime>
+		<StartTestTime>1652049483</StartTestTime>
 		<TestList>
 			<Test>./test1</Test>
 		</TestList>
-		<Test Status="failed">
+		<Test Status="passed">
 			<Name>test1</Name>
 			<Path>.</Path>
 			<FullName>./test1</FullName>
 			<FullCommandLine>C:\Users\catta\Documents\EDA\Eda_Level5\build\Debug\main_test.exe</FullCommandLine>
 			<Results>
-				<NamedMeasurement type="text/string" name="Exit Code">
-					<Value>SEGFAULT</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Exit Value">
-					<Value>3221225477</Value>
-				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.101201</Value>
+					<Value>0.0658975</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -58,12 +52,22 @@
 				</NamedMeasurement>
 				<Measurement>
 					<Value>Testeando el guardado de Strings...
+C:/Users/catta/Documents/EDA/Eda_Level5/textoPrueba.txt
+Hola
+Open!!!
+GENOMA EXTRAIDO FINAL: acgacgacgagcagcagcaa
+PASS
+
+-ATTGCGTATT-G
+ ||||   ||| |
+CATTG---ATTAG
+PASS
 </Value>
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>May 07 18:49 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</EndDateTime>
-		<EndTestTime>1651960160</EndTestTime>
+		<EndDateTime>May 08 19:38 Hora est[NON-UTF-8-BYTE-0xE1]ndar de Argentina</EndDateTime>
+		<EndTestTime>1652049483</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

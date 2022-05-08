@@ -1,0 +1,4 @@
+ORIGIN
+111221121212
+211212
+acgacgacgagcagcagcaa

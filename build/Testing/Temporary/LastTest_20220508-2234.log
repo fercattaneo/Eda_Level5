@@ -1,18 +1,18 @@
-Start testing: May 08 18:11 Hora estándar de Argentina
+Start testing: May 08 19:38 Hora estándar de Argentina
 ----------------------------------------------------------
 1/1 Testing: test1
 1/1 Test: test1
 Command: "C:/Users/catta/Documents/EDA/Eda_Level5/build/Debug/main_test.exe"
 Directory: C:/Users/catta/Documents/EDA/Eda_Level5/build
-"test1" start time: May 08 18:11 Hora estándar de Argentina
+"test1" start time: May 08 19:38 Hora estándar de Argentina
 Output:
 ----------------------------------------------------------
 Testeando el guardado de Strings...
-C:/Users/Agustin/source/repos/Eda_Level5/textoPrueba.txt
+C:/Users/catta/Documents/EDA/Eda_Level5/textoPrueba.txt
 Hola
-noup
-GENOMA EXTRAIDO FINAL: 
-FAIL
+Open!!!
+GENOMA EXTRAIDO FINAL: acgacgacgagcagcagcaa
+PASS
 
 -ATTGCGTATT-G
  ||||   ||| |
@@ -22,8 +22,8 @@ PASS
 Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"test1" end time: May 08 18:11 Hora estándar de Argentina
+"test1" end time: May 08 19:38 Hora estándar de Argentina
 "test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 08 18:11 Hora estándar de Argentina
+End testing: May 08 19:38 Hora estándar de Argentina
