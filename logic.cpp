@@ -2,6 +2,7 @@
 using namespace std;
 #include "logic.h"
 #include <vector>
+#include <new>
 
 int useAlgoritm (string &genoma1, string &genoma2){
 	int row = genoma1.size() + 1;
