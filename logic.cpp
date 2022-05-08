@@ -4,63 +4,72 @@ using namespace std;
 #include <vector>
 
 int useAlgoritm (string &genoma1, string &genoma2){
-	int row = genoma1.size();
-	int col = genoma2.size();
+	int row = genoma1.size() + 1;
+	int col = genoma2.size() + 1;
 	//la matriz sera de m+1 x n+1 ; con m = size del genoma1, n= size del genoma2
-	vector < vector <casilla_t> > matrix;
-	matrix[0].push_back({ 0,{0,0,0,0} });
+	casilla_t* matrix = new casilla_t[row * col];
+	matrix[0] = { 0,{0,0,0,0} };
 
-	for (int i = 1; i < col + 1; i++)
+	for (int i = 1; i < col; i++)
 	{
-		matrix[0].push_back({ -i,{0,0,0,0} });
+		matrix[i*col] = { -i,{0,0,0,0} };
 	}
-	for (int i = 1; i < row + 1; i++)
+	for (int i = 1; i < row; i++)
 	{
-		matrix[i].push_back({ -i,{0,0,0,0} });
+		matrix[i*row] = { -i,{0,0,0,0} };
 	}
 
 	int up = 0;
 	int left = 0;
 	int diagonal = 0;
 
-
-	for (int i= 0; i<row+1; i++)
+//Este bucle arranca en 1 dado que las primeras posiciones ya están colocadas 
+//y se analiza desde la celda (1,1)
+	for (int i=1; i < row; i++) 
 	{
-		for (int j=0; j<col+1; j++)
+		for (int j=1; j < col; j++)
 		{
-			if(genoma1[i]==genoma2[j]){
-				diagonal = matrix[i-1][j-1].value + MATCH;
+			if(genoma1[i-1]==genoma2[j-1]){  /*Resto uno en ambos casos dado que arranco 
+			contando desde 1 pero esa celda coincide con el 0 del string */
+				diagonal = matrix[(i-1)*row + (j-1)*col].value + MATCH;
 			}
 			else {
-				diagonal = matrix[i-1][j-1].value + SUST;
+				diagonal = matrix[(i-1)*row + (j-1)*col].value + SUST;
 			}
-			up = matrix[i-1][j].value + INDEL;
-			left = matrix[i][j-1].value + INDEL;
+			up = matrix[(i-1)*row + j*col].value + INDEL;
+			left = matrix[i*row + (j-1)*col].value + INDEL;
 
 			if (diagonal >= up && diagonal >= left){
+
+				matrix[i+row + j*col].value = diagonal;
+
 				if (diagonal == up && diagonal == left){
-					matrix[i][j].camino = {1,1,1};
+					matrix[i+row + j*col].camino = {1,1,1};
 				}
 				else if (diagonal == up){
-					matrix[i][j].camino = {1,1,0};
+					matrix[i+row + j*col].camino = {1,1,0};
 				}
 				else if (diagonal == left){
-					matrix[i][j].camino = {0,1,1};
+					matrix[i+row + j*col].camino = {0,1,1};
 				}
 				else {
-					matrix[i][j].camino = {0,1,0};
+					matrix[i+row + j*col].camino = {0,1,0};
 				}
 			}
 			else if (up > diagonal && up >= left){
+
+				matrix[i+row + j*col].value = up;
+
 				if (up == left){
-					matrix[i][j].camino = {1,0,1};
+					matrix[i+row + j*col].camino = {1,0,1};
 				}
 				else{
-					matrix[i][j].camino = {1,0,0};
+					matrix[i+row + j*col].camino = {1,0,0};
 				}
 			}
 			else{
-				matrix[i][j].camino = {0,0,1};
+				matrix[i+row + j*col].value = left;
+				matrix[i+row + j*col].camino = {0,0,1};
 			}
 		}
 	}
@@ -70,15 +79,15 @@ int useAlgoritm (string &genoma1, string &genoma2){
 	string middlestr;
 
 	//Funcion que imprime
-	int i = row + 1;
-	int j = col + 1;
+	int i = row;
+	int j = col;
 	while(i!=0 && j!=0){
-			if (matrix[i][j].camino.arriba){
+			if (matrix[i+row + j*col].camino.arriba){
 				gen1result += genoma1[i--];
 				gen2result += "-";
 				middlestr += " ";
 			}
-			else if (matrix[i][j].camino.diagonal){
+			else if (matrix[i+row + j*col].camino.diagonal){
 				gen1result += genoma1[i--];
 				gen2result += genoma2[j--];
 				if (genoma1[i]==genoma2[j]){
@@ -90,15 +99,15 @@ int useAlgoritm (string &genoma1, string &genoma2){
 				i--;
 				j--;
 			}
-			else if (matrix[i][j].camino.izquierda){
+			else if (matrix[i+row + j*col].camino.izquierda){
 				gen1result += '-';
-				gen2result += genoma2[j--];
+				gen2result += genoma2[j--]; //No se si es -- o ++. Porque estamos yendo de atras hacia adelante
 				middlestr += " ";
 			}
 		}
 
 	//cout << matrix;
-	return matrix[row + 1][col + 1].value;
+	return matrix[row + col].value;
 }
 
 void printAllignment (casilla_t *lastElement){

@@ -38,17 +38,23 @@ int main(int argc, char * argv[]) {
     */ 
     cout << "Testeando el guardado de Strings..." << endl;
     string value;
-    cout << argv[1] << endl;
     
     getGenoma(argv[1], value);
-    if(value == "acgacgacgagcagcagcaa"){
+    cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
+    string realvalue = "acgacgacgagcagcagcaa";
+    int eq = 1;
+    for (int i = 0; (i < realvalue.size()) && eq == 1; i++) {
+        if (realvalue[i] != value[i])
+            eq = 0;
+    }
+    if(eq){
          pass();
     }
     else{
          fail();
     }
 
-    // //Test 2. Valor de coincidencia
+    /* //Test 2. Valor de coincidencia
     string genoma1 = "gattaca";
     string genoma2 = "cgatacg";
     int coincidencia = useAlgoritm (genoma1, genoma2);
@@ -58,7 +64,7 @@ int main(int argc, char * argv[]) {
     else{
         fail();
     }
-
+    */
     //Test 3. verificar el valor de cada casilla del camino optimo
 
     return 0;
