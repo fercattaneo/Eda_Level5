@@ -27,14 +27,14 @@ int pass()
 }
 
 int main() {
-    /*Test 1. Guardado de string
+    /*Test 1.a Guardado de string
     * Modificando el archivo de texto pasado se prueban distintos casos limites.  
     *
     */ 
-    cout << "Testeando el guardado de Strings..." << endl;
+    cout << "Testeando el guardado de Strings con archivo..." << endl;
     string value;
 
-    getGenoma("C:/Users/catta/Documents/EDA/Eda_Level5/textoPrueba.txt", value);
+    getGenoma("C:/Users/Agustin/source/repos/Eda_Level5/textoPrueba.txt", value);
 
     cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
     string realvalue = "acgacgacgagcagcagcaa";
@@ -49,6 +49,25 @@ int main() {
     else{
          fail();
     }
+    /*Test 1.b Guardado de string
+   * Modificando el archivo de texto pasado se prueban distintos casos limites.
+   *
+   */
+    cout << "Testeando el guardado de Strings con archivo vacio..." << endl;
+
+    value = "";
+    getGenoma("C:/Users/Agustin/source/repos/Eda_Level5/emptyFileTest.txt", value);
+
+    cout << "GENOMA EXTRAIDO FINAL: " << value << endl;
+    realvalue = "";
+    eq = (value == realvalue);
+    if (eq) {
+        pass();
+    }
+    else {
+        fail();
+    }
+
 
 
      //Test 2. Valor de coincidencia

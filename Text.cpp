@@ -19,16 +19,15 @@ using namespace std;
 void getGenoma(char* file, string& genoma) {
 	cout << file << endl;
 	ifstream fileIn1(file);
-	cout << "Hola" <<endl;
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
 
 	if (fileIn1.is_open()) {
-		cout << "Open!!!\n";
+		cout << "File Opened!\n";
 	}
 	else {
-		cout << "noup\n";
+		cout << "File not Opened!\n";
 	}
 
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
