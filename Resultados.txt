@@ -1,0 +1,41 @@
+Para el primer genoma desconocido se obtuvieron los siguientes resultados.
+
+comparandolo con Alpha B.1.1.7 coincidencia = 29730
+comparandolo con Beta la coincidencia es de29730
+comparandolo con Deltha la coincidencia es de 29826
+comparandolo con Gamma la coincidencia es de 29727
+comparandolo con 1era bariante de Omicron la coincidencia es de 29696
+comparandolo con 2da bariante Omicron la coincidencia = 29701
+con Wuhan reference genome coincidencia = 29789
+
+Claramente el genoma desconocido 1 se parece más a la variante Deltha de coronavirus.
+
+Para el 2do genoma desconocido se obtuvieron los siguientes resultados.
+
+comparandolo con Alpha la coincidencia es de 29822
+comparandolo con Beta la coincidencia es de 29865
+comparandolo con Delta la coincidencia es de 29807
+comparandolo con Gamma la coincidencia es de 29821
+comparandolo con la primera bariante de Omicron la coincidencia es de 29774
+comparandolo con la 2da bariante de Omicron la coincidencia es de 29777
+comparandolo con Wuhan reference genome la coincidencia es de 29885
+
+Por lo tanto, se puede ver que coincide con el último caso, Wuhan, dado que la coincidencia es más alta que con las otras bariantes.
+
+Para el 3er genoma desconocido se obtuvieron los siguientes resultados
+
+comparandolo con Alpha la coincidencia es de 29745
+comparandolo con Beta la coincidencia es de 29786
+comparandolo con Delta la coincidencia es de 29840
+comparandolo con Gamma la coincidencia es de 29742
+comparandolo con la primera bariante de Omicron la coincidencia es de 29711
+comparandolo con la 2da bariante de Omicron la coincidencia es de 29716
+comparandolo con Wuhan reference genome la coincidencia es de 29804
+
+Por lo tanto, se puede observar que el valor mas alto de coincidencia se lo lleva con la variable Delta 
+
+
+
+
+
+
