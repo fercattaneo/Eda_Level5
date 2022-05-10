@@ -1,10 +1,10 @@
 /*
-* Creado por: Agustin Casas y Fernanda Cattaneo
-* 22.08 EDA Level 5
-* 10/05/2022
-* En este archivo se encuentra la función que se encarga de leer e interpretar el 
-* archivo con los genomas a analizar.
-*/
+ * Creado por: Agustin Casas y Fernanda Cattaneo
+ * 22.08 EDA Level 5
+ * 10/05/2022
+ * En este archivo se encuentra la función que se encarga de leer e interpretar el
+ * archivo con los genomas a analizar.
+ */
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -15,29 +15,31 @@
 
 using namespace std;
 
-//Funcion que se encarga de leer el archivo que se le pasa y guardar los genomas en un string
-void getGenoma(char* file, string& genoma) {
+// Funcion que se encarga de leer el archivo que se le pasa y guardar los genomas en un string
+void getGenoma(char *file, string &genoma)
+{
 	ifstream fileIn1(file);
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
 
-	#ifdef DEBUG
-		if (fileIn1.is_open()) {
-			cout << "Open!!!\n";
-		}
-		else {
-			cout << "noup\n";
-		}
-	#endif
+#ifdef DEBUG
+	if (fileIn1.is_open())
+	{
+		cout << "Open!!!\n";
+	}
+	else
+	{
+		cout << "noup\n";
+	}
+#endif
 
-	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
+	// la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
 	while ((found == string::npos) && (getline(fileIn1, linea)))
 	{
 		found = linea.find("ORIGIN");
-
 	}
-	//si el archivo contiente ORIGIN...
+	// si el archivo contiente ORIGIN...
 	if (found != string::npos)
 	{
 		found = string::npos;
@@ -62,7 +64,7 @@ void getGenoma(char* file, string& genoma) {
 					break;
 				}
 			}
-			//se lee un maximo de 6 strings. Si hay menos strings se deja de leer
+			// se lee un maximo de 6 strings. Si hay menos strings se deja de leer
 
 		} while ((getline(fileIn1, linea)) && (found == string::npos));
 	}
