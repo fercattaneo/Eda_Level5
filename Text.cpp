@@ -17,18 +17,19 @@ using namespace std;
 
 //Funcion que se encarga de leer el archivo que se le pasa y guardar los genomas en un string
 void getGenoma(char* file, string& genoma) {
-	cout << file << endl;
 	ifstream fileIn1(file);
 	string linea;
 	size_t found = string::npos;
 	long int geneNumber = 0;
 
-	if (fileIn1.is_open()) {
-		cout << "File Opened!\n";
-	}
-	else {
-		cout << "File not Opened!\n";
-	}
+	#ifdef DEBUG
+		if (fileIn1.is_open()) {
+			cout << "Open!!!\n";
+		}
+		else {
+			cout << "noup\n";
+		}
+	#endif
 
 	//la evaluacion es lazy asi que en el caso que se encuentre ORIGIN, no se evalua el siguiente getline
 	while ((found == string::npos) && (getline(fileIn1, linea)))
