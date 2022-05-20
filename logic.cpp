@@ -9,7 +9,9 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 #include "logic.h"
+#include "text.h"
 #include <vector>
 #include <new>
 using namespace std;
@@ -155,31 +157,8 @@ contando desde 1 pero esa celda coincide con el 0 del string */
 
 	// Se muestra en pantalla
 	printStrings(gen1result, gen2result, middlestr);
-
-	return matrix[row * col - 1].value;
+	int coincidenciafinal= matrix[row * col - 1].value;
 	delete[] matrix;
+	return coincidenciafinal;
 }
 
-/*Funcion que invierte los string. Se utiliza dado que la matriz se recorre desde
-el ultimo elemento al primer elemento*/
-void invertString(string &originalString)
-{
-	string invertedString;
-	for (int i = originalString.size() - 1; i >= 0; i--)
-	{
-		invertedString += originalString[i];
-	}
-	originalString = invertedString;
-}
-
-/*Funcion que se utiliza para imprimir los string respetando que no sean mas
-de 60 acaracteres por linea*/
-void printStrings(string &gen1result, string &gen2result, string &middlestr)
-{
-	for (int x = 0; x < gen1result.size(); x += 59)
-	{
-		cout << gen1result.substr(x, 60) << endl;
-		cout << middlestr.substr(x, 60) << endl;
-		cout << gen2result.substr(x, 60) << endl;
-	}
-}

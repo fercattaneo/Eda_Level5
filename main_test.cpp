@@ -53,7 +53,7 @@ int main(void)
     }
     /*Test 1.b Guardado de string
    * Modificando el archivo de texto pasado se prueban distintos casos limites.
-   *
+   *    Esta parte se usa con un archivo .txt vacio para probar caso limite
    */
     cout << "Testeando el guardado de Strings con archivo vacio..." << endl;
 
@@ -73,6 +73,7 @@ int main(void)
 
     // Test 2. Valor de coincidencia
 
+    cout << "Testeando la coincidencia de Strings" << endl;
     string genoma1 = "attgcgtattg";
     string genoma2 = "cattgattag";
     string gen1result;
@@ -88,14 +89,17 @@ int main(void)
         fail();
     }
 
-    // Test 3. verificar que las uniones entre los genomas sean las correctas
-    string gen1 = "gattaca";
-    string gen2 = "cgatacg";
+    /* Test 3.b: verificar que las uniones entre los genomas sean las correctas
+    * Esta prueba verifica para strings vacios
+    */
+    cout << "Testeando la coincidencia de Strings vacios..." << endl;
+    string gen1 = "";
+    string gen2 = "";
     string result1;
     string middle;
     string result2;
     useAlgoritm(gen1, gen2, result1, result2, middle);
-    if (middle == " ||| ||*")
+    if (middle == "")
     {
         pass();
     }

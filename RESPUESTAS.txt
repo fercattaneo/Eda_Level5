@@ -36,6 +36,6 @@ Por lo tanto, se puede observar que el valor mas alto de coincidencia se lo llev
 
 
 
-
+Complejidad del Algoritmo: Este algoritmo presenta complejidad de n^2 debido a la matriz creada para comparar los genomas.
 
 
